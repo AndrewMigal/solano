@@ -1,6 +1,7 @@
 ruby_version:
  SPLIT:
    - 'ruby-2.4.0'
+script: 'exit 0' 
 coverage:
   version: 2
   enabled: true
