@@ -1,35 +1,25 @@
 ruby_version:
  SPLIT:
    - 'ruby-2.4.0'
-script: 'exit 0' 
+script: 'exit 0'
 coverage:
   version: 2
   enabled: true
 bundler_version: 1.15.4
-plan:
-  - first
-  - second
-profiles:
-  first:  
-    script: 'exit 0'
-    tool_config:
-      gcc:
-      version: '4.8'
-    test_pattern:
-      - features/*.feature
-      - spec/**_spec.rb
-    test_exclude_pattern:
-      - spec/agent_spec.rb
-    tests:
-      - bundle exec rspec spec/agent_spec.rb
-    cache:
-    per_profile: true
-    key_paths:
-      - Gemfile
-      - Gemfile.lock
-      - solano.gemspec
-      - lib/solano/version.rb
-  second:
-    test_pattern:
-      - features/*.feature
-      - spec/**_spec.rb
+tool_config:
+  gcc:
+    version: '4.8'
+test_pattern:
+  - features/*.feature
+  - spec/**_spec.rb
+test_exclude_pattern:
+  - spec/agent_spec.rb
+tests:
+  - bundle exec rspec spec/agent_spec.rb
+cache:
+  per_profile: true
+  key_paths:
+    - Gemfile
+    - Gemfile.lock
+    - solano.gemspec
+    - lib/solano/version.rb
