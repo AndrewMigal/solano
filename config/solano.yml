@@ -11,6 +11,7 @@ plan:
   - second
 profiles:
   first:  
+    script: 'exit 0'
     tool_config:
       gcc:
       version: '4.8'
