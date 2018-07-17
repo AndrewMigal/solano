@@ -1,7 +1,6 @@
 ruby_version:
  SPLIT:
    - 'ruby-2.4.0'
-script: 'exit 0' 
 coverage:
   version: 2
   enabled: true
@@ -10,7 +9,6 @@ plan:
   - first
 profiles:
   first:  
-    script: 'exit 0'
     tool_config:
       gcc:
       version: '4.8'
