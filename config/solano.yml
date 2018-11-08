@@ -13,6 +13,9 @@ test_pattern:
   - spec/**_spec.rb
 test_exclude_pattern:
   - spec/agent_spec.rb
+  - spec/agent_unstubbed_spec.rb
+  - spec/prompt_spec.rb
+  - spec/solano_api_spec.rb
 tests:
   - bundle exec rspec spec/agent_spec.rb
 cache:
